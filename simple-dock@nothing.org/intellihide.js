@@ -74,7 +74,10 @@ const Intellihide = new Lang.Class({
                 global.display, 'grab-op-end',  () => { this._grabOpEnd(); }
             ],
             [
-                global.window_manager, 'size-change', () => { this._updateDockVisibility(); }
+                global.window_manager, 'maximize', () => { this._updateDockVisibility(); }
+            ],
+            [
+                global.window_manager, 'unmaximize', () => { this._updateDockVisibility(); }
             ],
             [
                 global.screen, 'restacked', () => { this._updateDockVisibility(); }
